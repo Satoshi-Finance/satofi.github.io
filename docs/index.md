@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Overview
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+$\sqrt{3x-1}+(1+x)^2$
 
 ## Commands
 
