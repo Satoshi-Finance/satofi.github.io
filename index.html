@@ -233,18 +233,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#key-features-in-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
+      Key Features in summary
     </span>
   </a>
   
@@ -270,6 +261,26 @@
   
   <span class="md-ellipsis">
     What is redemption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Testnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testnet usage
   </span>
   
 
@@ -305,18 +316,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#key-features-in-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
+      Key Features in summary
     </span>
   </a>
   
@@ -338,20 +340,17 @@
 
 
 <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
-<p><span class="arithmatex">\(\sqrt{3x-1}+(1+x)^2\)</span></p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<p>Satoshi Finance is a decentralized stable coin protocol that allows user to mint a USD-pegged token called btUSD by using <a href="https://www.binance.com/en/collateral-btokens">BTCB</a> as collateral on BNB Smart Chain. </p>
+<p>The minimum allowed collateral value ratio to minted btUSD is 110%: for example, you could mint 1000 btUSD by collateralizing $1100 worth of BTCB.</p>
+<p>There are also some battle-tested mechanisms in place for the stability of btUSD. Learn more about how these mechanisms work in dedicated documentation sections.</p>
+<h2 id="key-features-in-summary">Key Features in summary<a class="headerlink" href="#key-features-in-summary" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>Interest-Free: There is no interest for the minted btUSD no matter you are going to keep the collateralized position for a month or a year</li>
+<li>Efficient-Liquidation: btUSD holders could deposit into stability pool to provide offset reserve for liquidation and earn liquidated collateral plus SATO token in return</li>
+<li>Guaranteed-Low-Bound: When btUSD is traded below $1 peg, any btUSD holder could redeem 1 btUSD for $1 worth of collateral from the system, thus making an effective support for restoring the peg</li>
+<li>Immutable: All protocol parameters are determined at time of contracts deployment and no admin or DAO could change the values or upgrade the contracts </li>
+<li>Decentralization-First: Everyone could host a frontend User Interface to diversify the adoption and provide censorship resistance</li>
 </ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
 
 
 
