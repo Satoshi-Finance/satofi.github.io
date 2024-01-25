@@ -16,5 +16,7 @@ extra_javascript:
 nav:
 - 'index.md'
 - 'How to mint btUSD.md'
+- 'btUSD stability pool and liquidation.md'
 - 'Efficient Redemption.md'
+- 'SATO staking.md'
 - 'Testnet.md'

@@ -1,6 +1,6 @@
 # Overview
 
-Satoshi Finance is a decentralized stable coin protocol that allows user to mint a USD-pegged token called btUSD by using [BTCB](https://www.binance.com/en/collateral-btokens) as collateral on BNB Smart Chain. 
+[Satoshi Finance](https://www.satofi.app) is a decentralized stable coin protocol that allows user to mint a USD-pegged token called btUSD by using [BTCB](https://www.binance.com/en/collateral-btokens) as collateral on BNB Smart Chain. 
 
 The minimum allowed collateral value ratio to minted btUSD is 110%: for example, you could mint 1000 btUSD by collateralizing $1100 worth of BTCB.
 

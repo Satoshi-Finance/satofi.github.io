@@ -4,7 +4,9 @@ Any btUSD holder could always redeem X btUSD against the system for $X worth of 
 
 For example, if the current redemption fee is 1% and the collateral price is $50000, then you redeem 1000 btUSD, you would get 0.0198 collateral (0.02 minus a redemption fee of 0.0002).
 
-All active Troves in the system will take a "socialized" share when redemption happens. This means each Trove would expect a decrease in both collateral and debt but with a higher(healthier) ICR after redemption. 
+All active Troves in the system will take a "socialized" share when redemption happens. This means each Trove would expect a decrease in **BOTH** collateral and debt but with a higher(healthier) ICR after redemption.
+
+This mechanism of redemption would bring less gas cost and encourage trove usage for better capital efficiency.
 
 Note if the system TCR is lower than MCR, then redemption is not allowed until TCR return to a higher level.
 
@@ -15,7 +17,10 @@ Redemption enforce a low pricing bound for btUSD, i.e., when btUSD is traded **b
 For example, if btUSD is traded at $0.98 in the market, then arbitrageur could buy 100 btUSD from market using $98  then redeem it to receive $99 worth of collateral (considering 1% redemption fee), thus resulting a $1 net profit for arbitrageur. Since less btUSD exist in the market after redemption, the price peg is expected to restore efficiently.
 
 ## As a Trove owner, do I expect a loss if redemption happens? 
-If redemption happens, troves do not suffer any loss in face value since the redemption is executed at exactly the reported collateral price. However, a trove will lose part of its original collateral exposure.  
+If redemption happens, troves do **NOT** suffer any loss in face value since the redemption is executed at exactly the reported collateral price. However, a trove will lose part of its original collateral exposure.  
+
+## As a Trove owner, what will happen if my trove's debt is reduced by redemption to the level below minimum requirement? 
+When a trove's debt is below minimum requirement (200 btUSD), anyone could close the trove by repaying any remaining debt and take a "scavenge" reward from the trove's collateral worth up to 10% of the minimum debt, i.e., 20 btUSD.
 
 ## Math for redemption 
 
