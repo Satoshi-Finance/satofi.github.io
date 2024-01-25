@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../How%20to%20mint%20btUSD/">
       
       
-        <link rel="next" href="../btUSD%20stability%20pool%20and%20liquidation/">
+        <link rel="next" href="../Efficient%20Redemption/">
       
       
       <link rel="icon" href="../attachment/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>How to mint btUSD - Satoshi Finance Documentation</title>
+        <title>Liquidation and Stability Pool - Satoshi Finance Documentation</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-mint-btusd" class="md-skip">
+        <a href="#liquidation-and-stability-pool" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to mint btUSD
+              Liquidation and Stability Pool
             
           </span>
         </div>
@@ -206,6 +206,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../How%20to%20mint%20btUSD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to mint btUSD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -222,7 +242,7 @@
           
   
   <span class="md-ellipsis">
-    How to mint btUSD
+    Liquidation and Stability Pool
   </span>
   
 
@@ -233,7 +253,7 @@
         
   
   <span class="md-ellipsis">
-    How to mint btUSD
+    Liquidation and Stability Pool
   </span>
   
 
@@ -255,27 +275,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#over-collateralized-position-trove" class="md-nav__link">
+  <a href="#what-is-the-stability-pool" class="md-nav__link">
     <span class="md-ellipsis">
-      Over-Collateralized Position: Trove
+      What is the Stability Pool?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#any-fee-would-be-paid-to-mint-btusd" class="md-nav__link">
+  <a href="#why-should-i-deposit-btusd-to-the-stability-pool" class="md-nav__link">
     <span class="md-ellipsis">
-      Any fee would be paid to mint btUSD?
+      Why should I deposit btUSD to the Stability Pool?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-recovery-mode-and-normal-mode" class="md-nav__link">
+  <a href="#why-liquidation-is-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Recovery Mode and Normal Mode
+      Why liquidation is needed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-can-liquidate-troves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who can liquidate Troves?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-withdraw-my-deposit-from-stability-pool-whenever-i-want" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I withdraw my deposit from Stability Pool whenever I want?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-you-determine-the-price-of-collateral" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do you determine the price of collateral?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-if-the-stability-pool-is-empty-when-there-is-liquidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happens if the Stability Pool is empty when there is liquidation?
     </span>
   </a>
   
@@ -285,26 +341,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../btUSD%20stability%20pool%20and%20liquidation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Liquidation and Stability Pool
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -396,27 +432,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#over-collateralized-position-trove" class="md-nav__link">
+  <a href="#what-is-the-stability-pool" class="md-nav__link">
     <span class="md-ellipsis">
-      Over-Collateralized Position: Trove
+      What is the Stability Pool?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#any-fee-would-be-paid-to-mint-btusd" class="md-nav__link">
+  <a href="#why-should-i-deposit-btusd-to-the-stability-pool" class="md-nav__link">
     <span class="md-ellipsis">
-      Any fee would be paid to mint btUSD?
+      Why should I deposit btUSD to the Stability Pool?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-recovery-mode-and-normal-mode" class="md-nav__link">
+  <a href="#why-liquidation-is-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Recovery Mode and Normal Mode
+      Why liquidation is needed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-can-liquidate-troves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who can liquidate Troves?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-withdraw-my-deposit-from-stability-pool-whenever-i-want" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I withdraw my deposit from Stability Pool whenever I want?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-you-determine-the-price-of-collateral" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do you determine the price of collateral?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-if-the-stability-pool-is-empty-when-there-is-liquidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happens if the Stability Pool is empty when there is liquidation?
     </span>
   </a>
   
@@ -437,19 +509,35 @@
                   
 
 
-<h1 id="how-to-mint-btusd">How to mint btUSD<a class="headerlink" href="#how-to-mint-btusd" title="Permanent link">&para;</a></h1>
-<h2 id="over-collateralized-position-trove">Over-Collateralized Position: Trove<a class="headerlink" href="#over-collateralized-position-trove" title="Permanent link">&para;</a></h2>
-<p>Satoshi Finance utilize a classical <a href="https://coinmarketcap.com/academy/glossary/over-collateralization">over-collateralization pattern</a> for issuance of the stable coin: btUSD. Each wallet address could have up to one over-collateralized position called "trove" which symbolize its collection of assets within Satoshi Finance: collateral and debt(minted btUSD).</p>
-<p><a href="https://www.binance.com/en/collateral-btokens">BTCB</a> will be used as the collateral and the minimum collateralization ratio allowed, i.e., the market face-value of collateral provided against the minted amount of btUSD, is as low as 110%(Minimum Collateralization Ratio), i.e., a user(just any wallet address) could open its trove by providing $1100 worth of BTCB and take out 1000 btUSD. But note that any trove with a collateralization ratio(Individual Collateralization Ratio) less than 110% will be subject to liquidation, thus keep a reasonable higher collateralization ratio is strongly recommended.</p>
-<p>There is also a friendly minimum requirement on how much btUSD a trove should at least mint: 200.</p>
-<h2 id="any-fee-would-be-paid-to-mint-btusd">Any fee would be paid to mint btUSD?<a class="headerlink" href="#any-fee-would-be-paid-to-mint-btusd" title="Permanent link">&para;</a></h2>
-<p>As long as a user mint btUSD from its own trove, an one-time mint fee is charged on the minted amount and included into the trove's total debt. Please note that the mint fee is variable (and determined by algorithm coded in smart contract) and has a minimum floor value of 0.5% in normal scenario. The fee is <code>0%</code> during Recovery Mode which is explained below. </p>
-<p>No additional interest will be charged so user doesn't need to worry about how long should they keep the trove open. The costs to keep hold of minted btUSD for one week and one year are the same thus make Satoshi Finance a good fit for leveraged bitcoin long trader in the long run. </p>
-<p>The mint fee is calculated by multiplying the amount of minted btUSD with the sum of fee floor value(<code>0.5%</code>) and a "baseRate". For example: If the mint fee stands at <code>1%</code> and the user wants to mint <code>1000</code> btUSD then a fee of <code>10</code> btUSD will be charged and the user's trove will have a total debt of <code>1010</code> btUSD.</p>
-<h2 id="what-is-recovery-mode-and-normal-mode">What is Recovery Mode and Normal Mode<a class="headerlink" href="#what-is-recovery-mode-and-normal-mode" title="Permanent link">&para;</a></h2>
-<p>We calcualte the ratio of the market face-value of total collateral locked in system against the total minted btUSD as Total Collateralization Ratio. For example, there are two troves in the system with same collateral amount of 1 BTCB, but with different debts of <code>20000</code> btUSD and <code>10000</code> btUSD respectively. If market price of collateral is <code>$40000</code>, then TCR could be calculated as <span class="arithmatex">\(\frac{(1+1)*40000}{20000+10000}=266.67\%\)</span></p>
-<p>When TCR is less than <code>130%</code>(Critical Collateralization Ratio), Recovery Mode is triggered. Otherwise, the system is in Normal Mode.</p>
-<p>When system is in Recovery Mode, there will be more restrictions for operations like open trove or adjust trove to guarantee the system TCR shall not deteriorates further. And more troves may become liquidatable in Recovery Mode to faciliate a quick safe-state restore of the system.</p>
+<h1 id="liquidation-and-stability-pool">Liquidation and Stability Pool<a class="headerlink" href="#liquidation-and-stability-pool" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-the-stability-pool">What is the Stability Pool?<a class="headerlink" href="#what-is-the-stability-pool" title="Permanent link">&para;</a></h2>
+<p>The Stability Pool provides source of liquidity to repay debt for liquidatable troves and ensure that the total collateral locked is worth more than the total minted btUSD, i.e., always over-collateralized.</p>
+<p>When a trove is liquidated, an amount of btUSD equal to the trove's debt is offset within Stability Pool as repayment(burned directly). As a result, the trove's collateral is distributed among all participants of the Stability Pool. </p>
+<p>The Stability Pool is funded by actors who deposit btUSD into it (called Stability Providers). Over time as liquidation happens, Stability Providers will lose part of their btUSD deposits as repayment offset, but earn a proportional amount of the collateral from the liquidation. Due to the nature of MCR, it is expected that Stability Providers will typically receive a greater face-value of collateral than the debt they pay off. </p>
+<p>For example, if a trove of debt size 1000 btUSD is liquidated at ICR of <code>108%</code>, then Stability Provider will earn $1080 worth of collateral by fully repaying 1000 btUSD debt.</p>
+<h2 id="why-should-i-deposit-btusd-to-the-stability-pool">Why should I deposit btUSD to the Stability Pool?<a class="headerlink" href="#why-should-i-deposit-btusd-to-the-stability-pool" title="Permanent link">&para;</a></h2>
+<p>Stability Providers will earn liquidation gains (as explained above) and receive extra growth rewards in form of SATO tokens.</p>
+<h2 id="why-liquidation-is-needed">Why liquidation is needed?<a class="headerlink" href="#why-liquidation-is-needed" title="Permanent link">&para;</a></h2>
+<p>To make sure that the all minted btUSD is fully backed by adequate collateral, troves that fall under the some conditions like below MCR(<code>110%</code>) will be liquidated.</p>
+<p>Note in Recovery Mode, troves with ICR less than the system TCR are also susceptible to liquidation but may expect a collateral surplus for the trove owner to claim. </p>
+<p>For example, if the system TCR drops to <code>120%</code>, then system is in recovery mode and a trove with ICR <code>115%</code> which is less than TCR will be liquidated but the trove owner could have <span class="arithmatex">\(115\% - 110\%=5\%\)</span> of its collateral as surplus to claim back. </p>
+<p>Thus it is recommended to keep the trove ICR remain at a relatively higher level like <code>150%</code> or even above <code>200%</code> in volatile market conditions</p>
+<h2 id="who-can-liquidate-troves">Who can liquidate Troves?<a class="headerlink" href="#who-can-liquidate-troves" title="Permanent link">&para;</a></h2>
+<p>Anybody can liquidate a Trove as soon as it become liquidatable. The liquidation initiator will receive up to <code>0.5%</code> of the trove's collateral as a reward for this service.</p>
+<h2 id="can-i-withdraw-my-deposit-from-stability-pool-whenever-i-want">Can I withdraw my deposit from Stability Pool whenever I want?<a class="headerlink" href="#can-i-withdraw-my-deposit-from-stability-pool-whenever-i-want" title="Permanent link">&para;</a></h2>
+<p>Normally, you can make a withdrawal request for all your deposit in Stability Pool at any time. But the withdrawal request could only be confirmed <strong>after 30 minutes</strong>. </p>
+<p>However, please note that no withdrawal request could be made if the system TCR is below CCR (system in Recovery Mode).</p>
+<h2 id="how-do-you-determine-the-price-of-collateral">How do you determine the price of collateral?<a class="headerlink" href="#how-do-you-determine-the-price-of-collateral" title="Permanent link">&para;</a></h2>
+<p>The protocol uses primarily <a href="https://data.chain.link/bsc/mainnet/crypto-usd/btc-usd">Chainlink’s BTC:USD price feed</a>, but will failover to the <a href="https://oracle.binance.com/data-feeds/detail/bsc/BTC-USD">Binance Oracle</a> under the following (extreme) conditions:</p>
+<ul>
+<li>Chainlink price has not been updated for more than 4 hours</li>
+<li>Chainlink response call reverts, returns an invalid price or an invalid timestamp</li>
+<li>The price change between two consecutive Chainlink price updates is <span class="arithmatex">\(\gt 50\%\)</span></li>
+</ul>
+<h2 id="what-happens-if-the-stability-pool-is-empty-when-there-is-liquidation">What happens if the Stability Pool is empty when there is liquidation?<a class="headerlink" href="#what-happens-if-the-stability-pool-is-empty-when-there-is-liquidation" title="Permanent link">&para;</a></h2>
+<p>If the Stability Pool is empty, the system will apply a secondary liquidation mechanism called <strong>redistribution</strong>. It means that the system will redistribute the debt and collateral from liquidated troves to all other remaining troves. The redistribution is in proportion to the individual trove's stake (which is related to its collateral amount). </p>
+<p>Consider a case when collateral price is <code>$1992.87</code> and trove D is liquidated with its debt &amp; collateral redistributed among trove A,B,C:
+<img alt="liquidation redistribution" src="../attachment/liq-redist.png" /></p>
 
 
 

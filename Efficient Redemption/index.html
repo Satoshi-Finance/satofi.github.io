@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../How%20to%20mint%20btUSD/">
+        <link rel="prev" href="../btUSD%20stability%20pool%20and%20liquidation/">
       
       
-        <link rel="next" href="../Testnet/">
+        <link rel="next" href="../SATO%20staking/">
       
       
       <link rel="icon" href="../attachment/favicon.ico">
@@ -226,6 +226,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../btUSD%20stability%20pool%20and%20liquidation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Liquidation and Stability Pool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -287,6 +307,15 @@
   <a href="#as-a-trove-owner-do-i-expect-a-loss-if-redemption-happens" class="md-nav__link">
     <span class="md-ellipsis">
       As a Trove owner, do I expect a loss if redemption happens?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-a-trove-owner-what-will-happen-if-my-troves-debt-is-reduced-by-redemption-to-the-level-below-minimum-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      As a Trove owner, what will happen if my trove's debt is reduced by redemption to the level below minimum requirement?
     </span>
   </a>
   
@@ -358,6 +387,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../SATO%20staking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SATO Staking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Testnet/" class="md-nav__link">
         
   
@@ -410,6 +459,15 @@
   <a href="#as-a-trove-owner-do-i-expect-a-loss-if-redemption-happens" class="md-nav__link">
     <span class="md-ellipsis">
       As a Trove owner, do I expect a loss if redemption happens?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-a-trove-owner-what-will-happen-if-my-troves-debt-is-reduced-by-redemption-to-the-level-below-minimum-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      As a Trove owner, what will happen if my trove's debt is reduced by redemption to the level below minimum requirement?
     </span>
   </a>
   
@@ -484,13 +542,16 @@
 <h1 id="what-is-redemption">What is redemption<a class="headerlink" href="#what-is-redemption" title="Permanent link">&para;</a></h1>
 <p>Any btUSD holder could always redeem X btUSD against the system for $X worth of collateral. However, there would be a dynamic fee applied to redemption, corresponding to the redemption size related to the total supply of btUSD: the more btUSD redeemed, the more fee charged.</p>
 <p>For example, if the current redemption fee is 1% and the collateral price is $50000, then you redeem 1000 btUSD, you would get 0.0198 collateral (0.02 minus a redemption fee of 0.0002).</p>
-<p>All active Troves in the system will take a "socialized" share when redemption happens. This means each Trove would expect a decrease in both collateral and debt but with a higher(healthier) ICR after redemption. </p>
+<p>All active Troves in the system will take a "socialized" share when redemption happens. This means each Trove would expect a decrease in <strong>BOTH</strong> collateral and debt but with a higher(healthier) ICR after redemption.</p>
+<p>This mechanism of redemption would bring less gas cost and encourage trove usage for better capital efficiency.</p>
 <p>Note if the system TCR is lower than MCR, then redemption is not allowed until TCR return to a higher level.</p>
 <h2 id="why-redemption-is-needed">Why redemption is needed?<a class="headerlink" href="#why-redemption-is-needed" title="Permanent link">&para;</a></h2>
 <p>Redemption enforce a low pricing bound for btUSD, i.e., when btUSD is traded <strong>below</strong> $1 peg, redemption incentivizes arbitrageur to help fixing the peg. </p>
 <p>For example, if btUSD is traded at $0.98 in the market, then arbitrageur could buy 100 btUSD from market using $98  then redeem it to receive $99 worth of collateral (considering 1% redemption fee), thus resulting a $1 net profit for arbitrageur. Since less btUSD exist in the market after redemption, the price peg is expected to restore efficiently.</p>
 <h2 id="as-a-trove-owner-do-i-expect-a-loss-if-redemption-happens">As a Trove owner, do I expect a loss if redemption happens?<a class="headerlink" href="#as-a-trove-owner-do-i-expect-a-loss-if-redemption-happens" title="Permanent link">&para;</a></h2>
-<p>If redemption happens, troves do not suffer any loss in face value since the redemption is executed at exactly the reported collateral price. However, a trove will lose part of its original collateral exposure.  </p>
+<p>If redemption happens, troves do <strong>NOT</strong> suffer any loss in face value since the redemption is executed at exactly the reported collateral price. However, a trove will lose part of its original collateral exposure.  </p>
+<h2 id="as-a-trove-owner-what-will-happen-if-my-troves-debt-is-reduced-by-redemption-to-the-level-below-minimum-requirement">As a Trove owner, what will happen if my trove's debt is reduced by redemption to the level below minimum requirement?<a class="headerlink" href="#as-a-trove-owner-what-will-happen-if-my-troves-debt-is-reduced-by-redemption-to-the-level-below-minimum-requirement" title="Permanent link">&para;</a></h2>
+<p>When a trove's debt is below minimum requirement (200 btUSD), anyone could close the trove by repaying any remaining debt and take a "scavenge" reward from the trove's collateral worth up to 10% of the minimum debt, i.e., 20 btUSD.</p>
 <h2 id="math-for-redemption">Math for redemption<a class="headerlink" href="#math-for-redemption" title="Permanent link">&para;</a></h2>
 <p>Following are some math proof provided for interested users. Feel free to skip this section.</p>
 <h3 id="m0-redemption-fee-calculation-and-decaying">M0: Redemption fee calculation and decaying<a class="headerlink" href="#m0-redemption-fee-calculation-and-decaying" title="Permanent link">&para;</a></h3>
