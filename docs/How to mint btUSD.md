@@ -27,4 +27,4 @@ You could swap the minted btUSD on the market for more BTCB and use the latter a
 
 This process is repeatable and allow trove owner to expose more on collateral via more btUSD mint-then-swap steps.
  
-If we assume the markey price stability is working perfectly at 1 btUSD = $1, then the maximum achievable leverage ratio `11x` is given by this formula: $\frac{MCR}{MCR - 100\%}$.
+If we assume the market price is trading perfectly at 1 btUSD = $1, then the maximum achievable leverage ratio is `11x` given by this formula: $\frac{MCR}{MCR - 100\%}$.
