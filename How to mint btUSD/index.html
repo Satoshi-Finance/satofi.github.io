@@ -281,6 +281,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-could-i-create-a-leveraged-trove" class="md-nav__link">
+    <span class="md-ellipsis">
+      How could I create a leveraged trove?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -422,6 +431,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-could-i-create-a-leveraged-trove" class="md-nav__link">
+    <span class="md-ellipsis">
+      How could I create a leveraged trove?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -450,6 +468,10 @@
 <p>We calcualte the ratio of the market face-value of total collateral locked in system against the total minted btUSD as Total Collateralization Ratio. For example, there are two troves in the system with same collateral amount of 1 BTCB, but with different debts of <code>20000</code> btUSD and <code>10000</code> btUSD respectively. If market price of collateral is <code>$40000</code>, then TCR could be calculated as <span class="arithmatex">\(\frac{(1+1)*40000}{20000+10000}=266.67\%\)</span></p>
 <p>When TCR is less than <code>130%</code>(Critical Collateralization Ratio), Recovery Mode is triggered. Otherwise, the system is in Normal Mode.</p>
 <p>When system is in Recovery Mode, there will be more restrictions for operations like open trove or adjust trove to guarantee the system TCR shall not deteriorates further. And more troves may become liquidatable in Recovery Mode to faciliate a quick safe-state restore of the system.</p>
+<h2 id="how-could-i-create-a-leveraged-trove">How could I create a leveraged trove?<a class="headerlink" href="#how-could-i-create-a-leveraged-trove" title="Permanent link">&para;</a></h2>
+<p>You could swap the minted btUSD on the market for more BTCB and use the latter as extra collateral for your exiting trove. </p>
+<p>This process is repeatable and allow trove owner to expose more on collateral via more btUSD mint-then-swap steps.</p>
+<p>If we assume the markey price stability is working perfectly at 1 btUSD = $1, then the maximum achievable leverage ratio <code>11x</code> is given by this formula: <span class="arithmatex">\(\frac{MCR}{MCR - 100\%}\)</span>.</p>
 
 
 
