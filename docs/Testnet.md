@@ -1,5 +1,8 @@
 # Testnet usage
 
+## BNB testnet faucet
+You could get test BNB for gas cost from this [website](https://www.bnbchain.org/en/testnet-faucet)
+
 ## Test collateral faucet
 
 There is a customized collateral contract for test purpose on BNB Smart Chain testnet. 
@@ -16,5 +19,5 @@ In above screenshot, input parameter of `wad` is `1000000000000000000` for 1 col
 
 On testnet, same token as above test collateral is used for LP Mining
 
- ![LP faucet on testnet](../attachment/lp_testnet.png)
+![LP faucet on testnet](../attachment/lp_testnet.png)
 
