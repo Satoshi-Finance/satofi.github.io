@@ -21,3 +21,10 @@ We calcualte the ratio of the market face-value of total collateral locked in sy
 When TCR is less than `130%`(Critical Collateralization Ratio), Recovery Mode is triggered. Otherwise, the system is in Normal Mode.
 
 When system is in Recovery Mode, there will be more restrictions for operations like open trove or adjust trove to guarantee the system TCR shall not deteriorates further. And more troves may become liquidatable in Recovery Mode to faciliate a quick safe-state restore of the system.
+
+## How could I create a leveraged trove?
+You could swap the minted btUSD on the market for more BTCB and use the latter as extra collateral for your exiting trove. 
+
+This process is repeatable and allow trove owner to expose more on collateral via more btUSD mint-then-swap steps.
+ 
+If we assume the markey price stability is working perfectly at 1 btUSD = $1, then the maximum achievable leverage ratio `11x` is given by this formula: $\frac{MCR}{MCR - 100\%}$.
