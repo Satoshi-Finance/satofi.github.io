@@ -525,8 +525,10 @@
 <h2 id="who-can-liquidate-troves">Who can liquidate Troves?<a class="headerlink" href="#who-can-liquidate-troves" title="Permanent link">&para;</a></h2>
 <p>Anybody can liquidate a Trove as soon as it become liquidatable. The liquidation initiator will receive up to <code>0.5%</code> of the trove's collateral as a reward for this service.</p>
 <h2 id="can-i-withdraw-my-deposit-from-stability-pool-whenever-i-want">Can I withdraw my deposit from Stability Pool whenever I want?<a class="headerlink" href="#can-i-withdraw-my-deposit-from-stability-pool-whenever-i-want" title="Permanent link">&para;</a></h2>
-<p>Normally, you can make a withdrawal request for all your deposit in Stability Pool at any time. But the withdrawal request could only be confirmed <strong>after 30 minutes</strong>. </p>
-<p>However, please note that no withdrawal request could be made if the system TCR is below CCR (system in Recovery Mode).</p>
+<p>Each withdrawal would take two on-chain transactions to complete: first request a withdrawal then execute it. </p>
+<p>But the withdrawal request could only be confirmed <strong>after 30 minutes</strong> and there will be a window of 1-hour to execute the withdrawal. After that window, if the withdrawal is not executed, the request is considered expired so the depositor has to make another request.</p>
+<p>Also there will be a 12-hours interval requirement between two withdrawal request, i.e., depositor could only make another withdrawal request 12 hours after previous request.</p>
+<p>Normally, you can make a withdrawal request for all your deposit in Stability Pool at any time. However, please note that no withdrawal request could be made if the system TCR is below CCR (system in Recovery Mode).</p>
 <h2 id="how-do-you-determine-the-price-of-collateral">How do you determine the price of collateral?<a class="headerlink" href="#how-do-you-determine-the-price-of-collateral" title="Permanent link">&para;</a></h2>
 <p>The protocol uses primarily <a href="https://data.chain.link/bsc/mainnet/crypto-usd/btc-usd">Chainlink’s BTC:USD price feed</a>, but will failover to the <a href="https://oracle.binance.com/data-feeds/detail/bsc/BTC-USD">Binance Oracle</a> under the following (extreme) conditions:</p>
 <ul>
