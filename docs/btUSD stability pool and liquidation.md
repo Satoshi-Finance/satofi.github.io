@@ -25,9 +25,13 @@ Thus it is recommended to keep the trove ICR remain at a relatively higher level
 Anybody can liquidate a Trove as soon as it become liquidatable. The liquidation initiator will receive up to `0.5%` of the trove's collateral as a reward for this service.
 
 ## Can I withdraw my deposit from Stability Pool whenever I want?
-Normally, you can make a withdrawal request for all your deposit in Stability Pool at any time. But the withdrawal request could only be confirmed **after 30 minutes**. 
+Each withdrawal would take two on-chain transactions to complete: first request a withdrawal then execute it. 
 
-However, please note that no withdrawal request could be made if the system TCR is below CCR (system in Recovery Mode).
+But the withdrawal request could only be confirmed **after 30 minutes** and there will be a window of 1-hour to execute the withdrawal. After that window, if the withdrawal is not executed, the request is considered expired so the depositor has to make another request.
+
+Also there will be a 12-hours interval requirement between two withdrawal request, i.e., depositor could only make another withdrawal request 12 hours after previous request.
+
+Normally, you can make a withdrawal request for all your deposit in Stability Pool at any time. However, please note that no withdrawal request could be made if the system TCR is below CCR (system in Recovery Mode).
 
 ## How do you determine the price of collateral?
 The protocol uses primarily [Chainlink’s BTC:USD price feed](https://data.chain.link/bsc/mainnet/crypto-usd/btc-usd), but will failover to the [Binance Oracle](https://oracle.binance.com/data-feeds/detail/bsc/BTC-USD) under the following (extreme) conditions:
